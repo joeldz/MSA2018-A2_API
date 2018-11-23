@@ -203,19 +203,49 @@ namespace jdezscreenshotservice.Controllers
                     ScreenshotItem screenshotItem = new ScreenshotItem();
                     screenshotItem.Url = cloudBlock.SnapshotQualifiedUri.AbsoluteUri;
 
-                    // Get Subtitle data from Google Cloud Vision API
-                    screenshotItem.Subtitle = GetSubtitle(screenshotItem.Url, "northern-music-223223", "./My-First-Project-d90a39f377c2.json");
-                    
-                    screenshotItem.Series = root.docs[0].title_romaji;
-                    screenshotItem.Episode = root.docs[0].episode.ToString();
+                    if (!string.IsNullOrEmpty(screenshot.Subtitle))
+                    {
+                        screenshotItem.Subtitle = screenshot.Subtitle;
+                    }
+                    else
+                    {
+                        // Get Subtitle data from Google Cloud Vision API
+                        screenshotItem.Subtitle = GetSubtitle(screenshotItem.Url, "northern-music-223223", "./My-First-Project-d90a39f377c2.json");
+                    }
 
-                    TimeSpan t = TimeSpan.FromSeconds(root.docs[0].at);
-                    string timestamp = string.Format("{0:D2}:{1:D2}:{2:D2}",
-                                    t.Hours,
-                                    t.Minutes,
-                                    t.Seconds);
 
-                    screenshotItem.Timestamp = timestamp;
+                    if (!string.IsNullOrEmpty(screenshot.Series))
+                    {
+                        screenshotItem.Series = screenshot.Series;
+                    }
+                    else
+                    {
+                        screenshotItem.Series = root.docs[0].title_romaji;
+                    }
+
+                    if (!string.IsNullOrEmpty(screenshot.Episode))
+                    {
+                        screenshotItem.Episode = screenshot.Episode;
+                    }
+                    else
+                    {
+                        screenshotItem.Episode = root.docs[0].episode.ToString();
+                    }
+
+                    if (!string.IsNullOrEmpty(screenshot.Timestamp))
+                    {
+                        screenshotItem.Timestamp = screenshot.Timestamp;
+                    }
+                    else
+                    {
+                        TimeSpan t = TimeSpan.FromSeconds(root.docs[0].at);
+                        string timestamp = string.Format("{0:D2}:{1:D2}:{2:D2}",
+                                        t.Hours,
+                                        t.Minutes,
+                                        t.Seconds);
+
+                        screenshotItem.Timestamp = timestamp;
+                    }
 
                     System.Drawing.Image image = System.Drawing.Image.FromStream(stream);
                     screenshotItem.Height = image.Height.ToString();
