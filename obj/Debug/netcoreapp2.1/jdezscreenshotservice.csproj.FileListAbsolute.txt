@@ -1,0 +1,14 @@
+c:\users\joel\source\repos\jdezscreenshotservice\jdezscreenshotservice\obj\Debug\netcoreapp2.1\jdezscreenshotservice.csprojAssemblyReference.cache
+c:\users\joel\source\repos\jdezscreenshotservice\jdezscreenshotservice\bin\Debug\netcoreapp2.1\jdezscreenshotservice.deps.json
+c:\users\joel\source\repos\jdezscreenshotservice\jdezscreenshotservice\bin\Debug\netcoreapp2.1\jdezscreenshotservice.runtimeconfig.json
+c:\users\joel\source\repos\jdezscreenshotservice\jdezscreenshotservice\bin\Debug\netcoreapp2.1\jdezscreenshotservice.runtimeconfig.dev.json
+c:\users\joel\source\repos\jdezscreenshotservice\jdezscreenshotservice\bin\Debug\netcoreapp2.1\jdezscreenshotservice.dll
+c:\users\joel\source\repos\jdezscreenshotservice\jdezscreenshotservice\bin\Debug\netcoreapp2.1\jdezscreenshotservice.pdb
+c:\users\joel\source\repos\jdezscreenshotservice\jdezscreenshotservice\obj\Debug\netcoreapp2.1\jdezscreenshotservice.csproj.CoreCompileInputs.cache
+c:\users\joel\source\repos\jdezscreenshotservice\jdezscreenshotservice\obj\Debug\netcoreapp2.1\jdezscreenshotservice.RazorAssemblyInfo.cache
+c:\users\joel\source\repos\jdezscreenshotservice\jdezscreenshotservice\obj\Debug\netcoreapp2.1\jdezscreenshotservice.RazorAssemblyInfo.cs
+c:\users\joel\source\repos\jdezscreenshotservice\jdezscreenshotservice\obj\Debug\netcoreapp2.1\jdezscreenshotservice.AssemblyInfoInputs.cache
+c:\users\joel\source\repos\jdezscreenshotservice\jdezscreenshotservice\obj\Debug\netcoreapp2.1\jdezscreenshotservice.AssemblyInfo.cs
+c:\users\joel\source\repos\jdezscreenshotservice\jdezscreenshotservice\obj\Debug\netcoreapp2.1\jdezscreenshotservice.RazorTargetAssemblyInfo.cache
+c:\users\joel\source\repos\jdezscreenshotservice\jdezscreenshotservice\obj\Debug\netcoreapp2.1\jdezscreenshotservice.dll
+c:\users\joel\source\repos\jdezscreenshotservice\jdezscreenshotservice\obj\Debug\netcoreapp2.1\jdezscreenshotservice.pdb

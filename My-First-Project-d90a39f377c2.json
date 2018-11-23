@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "northern-music-223223",
+  "private_key_id": "d90a39f377c20b33bc8c65df897e84e44fe6cb44",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCcLJl8HQBvqPJP\nC27kCyL8DhopkJiEbdiuQ2luDUB1k+JRwjOjAERF9ytjKf5deXjAp5iKnFinLo/C\nCw/kfpdG39A4q9Tk1RBld+Qpwy0oR+KqZ2y/QSW6f+Pmlu5ZruZ0KlPCd83Fj5kA\nZNPM93WZvdtRa+aZoaaY/saylH+jZUBSpyZKBn4v3tTuY8Z4biFHU18F9gACJZN+\nurhEixbkJAr3++VBLqRAFm/UoaMOLHJ11sacpG8/yAq2jCqUT57FNEahs3unOuR3\nSDq5bBUK3nRDJh66aJQ+sd+Cr5lVV5g0oUt3ovRmyezuqjwgGjRw/J98NxlLy/fC\nGiUSsmrdAgMBAAECggEAG4LUx9MRDlpv0uJT9rqKf2XZkHxfDacPDkWkRyVw9zVl\nnxrrfzmPDVco7rdJTnyVO7TaT4KSsGKootlRg6IUMoE/PBhy8Jui34kC6aNu60Nc\nh8Gf28IVbBjW0/o/Aw/nG0wQhLeXiUeOP45DbD4kWoCiJ6HvFZ2vDBEHfhJgOK9Y\n+ydXrl39/pis1RsSkkKsG862hzmB20iW20rv0by9sD7qDfQx/42PJzEnQ//IQCXg\n5VU/bU5dp/ZKLHuxO6m1IRy8atrjfV+TM7bA0lbrBt5hOjtcUbl+DpqwDwXeo+16\n/jK/KtluXbtR1QlyaXt1gm+MU1yiSvOA15o207bNMQKBgQDY5XnRrj0dfAcf7W+h\npcOAq2lo7HgZ/PBBXTlSFjmENMpdb9lITmpCe19Q1SPXw1QpDPfOpFVOcdqvUZr1\nQ6VcZCNUhV47mguVouGPAX9ot6zTV++qmJgD/cbDkvWfKDWCBAt/ASZbqAGwfZ3D\nPt88Z975lRKJLP6RJOLt6ow2bQKBgQC4VJV14Hlej4n/cARmQLJp3xzFwTx1o39H\n8bwjGsD3+SO1mFyIveP7TiFEJeymgDBCBVTl/DSQV0ABE6RfxBifCiZ+RMXM/MHu\nHUjLl6Tiyly0xKNYqVPnIDuxiFbNqOdIDQizAoRaXVIdwVHvaPmTg9hlhsuP1fDy\nG0V5q8wAMQKBgQCvHe+SBJyhXo8eDwTvPTewfjTYGvwI93g/PfZWuUzs2fZ9JB4J\nTA5s6NEXIU8UGEet8SNueq3JbRFENZ3n4hrzkoIX7qobcw9hXCXC4VGuCYYHCNuf\nIB60MkQ1iUS4oK068OsbOqFupSHgDju+9NcmHTMgzWQuzt4l7+Msdg+IrQKBgFaM\nwLDceaCA3VbnDenFLwCvFh90oCLMZhMt2hzRjxHgFXhK1ggOwWFaShxpgjibsA0P\n29ExHq03ioH26xNcTANBDNn1CLs7YwOfFHMj/PPP+L+YJOqYdyDq7ZxqW/es+wvF\nsvP6lpKnhssZ3pL/Q1CUc6MYK7SZy8yiKXj7xYnBAoGAMhmeCiWqqhYG2KFrCNcl\niBMNgc7JgOo+xWS2IemXblC9Lx9+CJzxe3yoznFand6lHC95hoDbtErVvleqe4uP\nVkzYTEDj9SXbFcPgpk0GpT3QkMQ0EkHCAqCnVogz2Vmqxde90YJx2dRUOHxuUPN7\nijj/2ILP6SAnRRngVfKoAG4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "jdezscreenshots@northern-music-223223.iam.gserviceaccount.com",
+  "client_id": "103293869019154502551",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/jdezscreenshots%40northern-music-223223.iam.gserviceaccount.com"
+}
