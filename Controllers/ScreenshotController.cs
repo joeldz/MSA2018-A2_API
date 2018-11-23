@@ -198,11 +198,15 @@ namespace jdezscreenshotservice.Controllers
                     var responseString = await "https://trace.moe/api/search"
                     .PostUrlEncodedAsync(new { image = ("data:image/jpeg;base64," + ConvertImageURLToBase64(cloudBlock.SnapshotQualifiedUri.AbsoluteUri)).ToString()})
                     .ReceiveString();
+
+                    responseString = responseString.Replace("\\", "");
+                    
                     var root = JsonConvert.DeserializeObject<RootObject>(responseString);
                     
                     ScreenshotItem screenshotItem = new ScreenshotItem();
                     screenshotItem.Url = cloudBlock.SnapshotQualifiedUri.AbsoluteUri;
 
+                    
                     if (!string.IsNullOrEmpty(screenshot.Subtitle))
                     {
                         screenshotItem.Subtitle = screenshot.Subtitle;
@@ -246,6 +250,7 @@ namespace jdezscreenshotservice.Controllers
 
                         screenshotItem.Timestamp = timestamp;
                     }
+                    
 
                     System.Drawing.Image image = System.Drawing.Image.FromStream(stream);
                     screenshotItem.Height = image.Height.ToString();
