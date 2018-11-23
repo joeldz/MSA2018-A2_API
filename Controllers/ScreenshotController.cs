@@ -194,24 +194,28 @@ namespace jdezscreenshotservice.Controllers
                         return BadRequest("An error has occured while uploading your file. Please try again.");
                     }
 
+                    // Get Series, Episode, and Timestamp data from trace.moe API
+                    var responseString = await "https://trace.moe/api/search"
+                    .PostUrlEncodedAsync(new { image = ("data:image/jpeg;base64," + ConvertImageURLToBase64(cloudBlock.SnapshotQualifiedUri.AbsoluteUri)).ToString()})
+                    .ReceiveString();
+                    var root = JsonConvert.DeserializeObject<RootObject>(responseString);
+                    
                     ScreenshotItem screenshotItem = new ScreenshotItem();
                     screenshotItem.Url = cloudBlock.SnapshotQualifiedUri.AbsoluteUri;
+
+                    // Get Subtitle data from Google Cloud Vision API
                     screenshotItem.Subtitle = GetSubtitle(screenshotItem.Url, "northern-music-223223", "./My-First-Project-d90a39f377c2.json");
+                    
+                    screenshotItem.Series = root.docs[0].title_romaji;
+                    screenshotItem.Episode = root.docs[0].episode.ToString();
 
-                    var responseString = await "https://trace.moe/api/search"
-                    .PostUrlEncodedAsync(new { image = ("data:image/jpeg;base64," + ConvertImageURLToBase64(screenshotItem.Url)).ToString()})
-                    .ReceiveString();
+                    TimeSpan t = TimeSpan.FromSeconds(root.docs[0].at);
+                    string timestamp = string.Format("{0:D2}:{1:D2}:{2:D2}",
+                                    t.Hours,
+                                    t.Minutes,
+                                    t.Seconds);
 
-                    responseString = responseString.Replace("\\", "");
-
-                    JObject json = JObject.Parse(responseString);
-
-                    var root = JsonConvert.DeserializeObject<RootObject>(responseString);
-                    var series = root.docs[0].title_romaji;
-
-                    screenshotItem.Series = series;
-                    screenshotItem.Episode = screenshot.Episode;
-                    screenshotItem.Timestamp = screenshot.Timestamp;
+                    screenshotItem.Timestamp = timestamp;
 
                     System.Drawing.Image image = System.Drawing.Image.FromStream(stream);
                     screenshotItem.Height = image.Height.ToString();
@@ -221,7 +225,7 @@ namespace jdezscreenshotservice.Controllers
                     _context.ScreenshotItem.Add(screenshotItem);
                     await _context.SaveChangesAsync();
 
-                    return Ok($"Screenshot of {screenshot.Series} at {responseString} has successfully uploaded");
+                    return Ok($"Screenshot of {screenshotItem.Series} at {screenshotItem.Uploaded} has successfully uploaded");
                 }
             }
             catch (Exception ex)
